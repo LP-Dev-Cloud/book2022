@@ -1,3 +1,9 @@
+![deploy workflow](https://github.com/LP-Dev-Cloud/book2022/actions/workflows/deploy.yml/badge.svg)
+[![GitHub issues open](https://img.shields.io/github/issues/LP-Dev-Cloud/book2022.svg)](https://github.com/LP-Dev-Cloud/book2022/issues)
+![unmerged PRs](https://img.shields.io/github/issues-search/LP-Dev-Cloud/book2022?label=unmerged%20PRs&query=is%3Apr%20state%3Aopen%20is%3Aunmerged)
+![merged PRs](https://img.shields.io/github/issues-search/LP-Dev-Cloud/book2022?label=merged%20PRs&query=is%3Apr+is%3Aclosed+is%3Amerged)
+
+
 
 # LP CDTL Cloud - Book2022 !
 
