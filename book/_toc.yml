@@ -1,0 +1,18 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+parts:
+  # Prog
+  - caption: Prog
+    chapters:
+      - file: prog/prog1.md
+      - file: prog/prog2.ipynb
+  # Veille
+  - caption: Veille
+    chapters: 
+      - file: veille/intro_cfp
+        sections:
+          - file: veille/Macroquad
+
