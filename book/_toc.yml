@@ -8,6 +8,8 @@ parts:
   - caption: Prog
     chapters:
       - file: prog/prog1.md
+        sections: 
+          - file: prog/tp-benford/benford-rs-example.md
       - file: prog/prog2.ipynb
   # Veille
   - caption: Veille
