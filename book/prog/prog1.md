@@ -1,3 +1,3 @@
-# prog1 Titre
+# Tp "loi de Benford"
 
-Write what you want ... 
+Quelques exemples d'implémentations en divers langages.  
