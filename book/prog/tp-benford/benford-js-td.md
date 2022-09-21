@@ -1,7 +1,14 @@
 # JS
 Thomas Dulac
 ---
-Le code complet peut être trouvé sur la force, [ici](https://forge.iut-larochelle.fr/tdulac/Benford_js).
+Le code complet peut être trouvé sur la force, [ici](https://forge.iut-larochelle.fr/tdulac/Benford_js).  
+Il est écrit en *javascript* et s'execute avec *nodeJs*. 
+
+Il illustre la loi de Benford à partir d'un jeu de donnée.
+Il s'agit de mesurer la fréquence de chaque premier chiffre dans une série de nombre extraite du monde réel.
+
+Les données sont lues dans un CSV et le résultat et affiché dans la console.
+
 
 ## Fonctionnement général
 
@@ -58,6 +65,12 @@ async function main() {
 ```
 
 ## clean-csv.js
+la fonction gère quelques cas particuliers : 
+- quand le CSV est vide, le parseur renvoi une string vide
+- quand le CSV n'a qu'une ligne le parseur renvoi un tableau de string
+- quand le CSV a plusieurs ligne le parseur renvoi un tableau de tableau.
+
+
 ```javascript
 /**
  * Transform parsed CSV to be a simple list of number
@@ -102,6 +115,9 @@ test("standard", t => {
 ```
 
 ## first-digit.js
+C'est une fonction récursive.
+Elle utilise une fonction de 'troncage' de js.
+
 ```javascript
 /**
  * Return the first signifiant digit of a number 
@@ -158,6 +174,8 @@ test("test 10000000", t=>{
 ```
 
 ## count-frenquensy.js
+Retourne un object dont les clés sont les chiffres et les valeurs leurs fréquences
+
 ```javascript
 /**
  * From a array of digit, return a object with digit in key and frenquensy in value
