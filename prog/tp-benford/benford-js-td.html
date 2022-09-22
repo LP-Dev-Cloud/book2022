@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>JS &#8212; LP CDTL Cloud - Book2022</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">LP CDTL Cloud - Book2022</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    LP CDTL Cloud - Book 2022/2023
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Prog
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../prog1.html">
+   Tp “loi de Benford”
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="benford-rs-example.html">
+     Rust - example 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../prog2.html">
+   Bases syntaxiques de Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Veille
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../veille/intro_cfp.html">
+   Call for papers
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../veille/Macroquad.html">
+     Macroquad
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/LP-Dev-Cloud/book2022"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/LP-Dev-Cloud/book2022/issues/new?title=Issue%20on%20page%20%2Fprog/tp-benford/benford-js-td.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/prog/tp-benford/benford-js-td.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#thomas-dulac">
+   Thomas Dulac
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fonctionnement-general">
+   Fonctionnement général
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#index-js">
+   index.js
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clean-csv-js">
+   clean-csv.js
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tests">
+     tests
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-digit-js">
+   first-digit.js
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     tests
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#count-frenquensy-js">
+   count-frenquensy.js
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     tests
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>JS</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#thomas-dulac">
+   Thomas Dulac
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#fonctionnement-general">
+   Fonctionnement général
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#index-js">
+   index.js
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clean-csv-js">
+   clean-csv.js
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tests">
+     tests
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-digit-js">
+   first-digit.js
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     tests
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#count-frenquensy-js">
+   count-frenquensy.js
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     tests
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="js">
+<h1>JS<a class="headerlink" href="#js" title="Permalink to this headline">#</a></h1>
+<section id="thomas-dulac">
+<h2>Thomas Dulac<a class="headerlink" href="#thomas-dulac" title="Permalink to this headline">#</a></h2>
+<p>Le code complet peut être trouvé sur la force, <a class="reference external" href="https://forge.iut-larochelle.fr/tdulac/Benford_js">ici</a>.<br />
+Il est écrit en <em>javascript</em> et s’execute avec <em>nodeJs</em>.</p>
+<p>Il illustre la loi de Benford à partir d’un jeu de donnée.
+Il s’agit de mesurer la fréquence de chaque premier chiffre dans une série de nombre extraite du monde réel.</p>
+<p>Les données sont lues dans un CSV et le résultat et affiché dans la console.</p>
+</section>
+<section id="fonctionnement-general">
+<h2>Fonctionnement général<a class="headerlink" href="#fonctionnement-general" title="Permalink to this headline">#</a></h2>
+<p>le programme est découpé en plusieurs fonctions :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">main</span></code> qui execute la logique globale et utilise les autres fonctions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">parseAsync</span></code> provient d’un plugin (node-csv) et a été transformé en <em>promise</em> via <code class="docutils literal notranslate"><span class="pre">promisify</span></code>. Elle parse un fichier CSV.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cleanCsv</span></code> parse en nombres la première colonne du CSV et supprime les valeurs invalides</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">firstDigit</span></code> qui prend une liste de nombre et retourne une liste de 1er chiffres significatifs</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">countFrenquensy</span></code> prend une liste de <strong>chiffres</strong> et retourne une liste un dictionnaire de ‘chiffre:fréquence’</p></li>
+</ul>
+<p>Les tests unitaires utilisent le module js AVA</p>
+</section>
+<section id="index-js">
+<h2>index.js<a class="headerlink" href="#index-js" title="Permalink to this headline">#</a></h2>
+<p>est le point d’entré et exécute la fonction <code class="docutils literal notranslate"><span class="pre">main</span></code></p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">readFile</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;node:fs&#39;</span><span class="w"></span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">promisify</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;node:util&#39;</span><span class="w"></span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createParser</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;node-csv&#39;</span><span class="w"></span>
+<span class="k">import</span><span class="w"> </span><span class="nx">cleanCsv</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./clean-csv.js&#39;</span><span class="w"></span>
+<span class="k">import</span><span class="w"> </span><span class="nx">firstDigit</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./first_digit.js&#39;</span><span class="w"></span>
+<span class="k">import</span><span class="w"> </span><span class="nx">countFrequensy</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./count-frequensy.js&#39;</span><span class="w"></span>
+
+<span class="c1">//promisify method with callback</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">readFileAsync</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">promisify</span><span class="p">(</span><span class="nx">readFile</span><span class="p">)</span><span class="w"></span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">parseAsync</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">promisify</span><span class="p">(</span><span class="nx">createParser</span><span class="p">().</span><span class="nx">parse</span><span class="p">)</span><span class="w"></span>
+
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Read file</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">readFileAsync</span><span class="p">(</span><span class="s2">&quot;./data/data_inv.csv&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Parse CSV</span><span class="w"></span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * @type Array&lt;Array&lt;string&gt;&gt; </span>
+<span class="cm">     */</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">csv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">parseAsync</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">toString</span><span class="p">())</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Clean CSV</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">numberList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">cleanCsv</span><span class="p">(</span><span class="nx">csv</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Get first digit</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">firstDigitList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numberList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">firstDigit</span><span class="p">(</span><span class="nx">n</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// Count first digit frequensy</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">firstDigitFrequensy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">countFrequensy</span><span class="p">(</span><span class="nx">firstDigitList</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">//print result</span><span class="w"></span>
+<span class="w">    </span><span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">firstDigitFrequensy</span><span class="p">).</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">k</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">k</span><span class="si">}</span><span class="sb"> a une fréquense de </span><span class="si">${</span><span class="nx">firstDigitFrequensy</span><span class="p">[</span><span class="nx">k</span><span class="p">]</span><span class="si">}</span><span class="sb">%`</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="clean-csv-js">
+<h2>clean-csv.js<a class="headerlink" href="#clean-csv-js" title="Permalink to this headline">#</a></h2>
+<p>la fonction gère quelques cas particuliers :</p>
+<ul class="simple">
+<li><p>quand le CSV est vide, le parseur renvoi une string vide</p></li>
+<li><p>quand le CSV n’a qu’une ligne le parseur renvoi un tableau de string</p></li>
+<li><p>quand le CSV a plusieurs ligne le parseur renvoi un tableau de tableau.</p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Transform parsed CSV to be a simple list of number</span>
+<span class="cm"> * @param {Array&lt;Array&lt;string&gt;} rawCsv </span>
+<span class="cm"> * @returns {Array&lt;number&gt;}</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">cleanCsv</span><span class="p">(</span><span class="nx">rawCsv</span><span class="p">){</span><span class="w"></span>
+<span class="w">     </span>
+<span class="w">    </span><span class="c1">// empty file (the csv parser return a empty string for a empty csv file)</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">rawCsv</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">)</span><span class="w"> </span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">[]</span><span class="w"></span>
+
+<span class="w">     </span><span class="c1">// monoline file (the csv parser return a simple array for a monoline csv file)</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="ow">typeof</span><span class="w"> </span><span class="nx">rawCsv</span><span class="p">[</span><span class="mf">0</span><span class="p">]</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="nx">rawCsv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nx">rawCsv</span><span class="p">]</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// the csv parser return a matrix : row[column[cell]]</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">rawCsv</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">row</span><span class="p">=&gt;</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">row</span><span class="p">[</span><span class="mf">0</span><span class="p">]))</span><span class="w"> </span><span class="c1">// try to parse the first column in number</span><span class="w"></span>
+<span class="w">        </span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">n</span><span class="p">=&gt;</span><span class="nx">n</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="kc">NaN</span><span class="p">)</span><span class="w"> </span><span class="c1">// filter to keep only well parsed number</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="tests">
+<h3>tests<a class="headerlink" href="#tests" title="Permalink to this headline">#</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ava&#39;</span><span class="w"></span>
+
+<span class="k">import</span><span class="w"> </span><span class="nx">cleanCsv</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../clean-csv.js&#39;</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;empty&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">deepEqual</span><span class="p">(</span><span class="nx">cleanCsv</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">),</span><span class="w"> </span><span class="p">[])</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;one line&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">deepEqual</span><span class="p">(</span><span class="w">  </span><span class="nx">cleanCsv</span><span class="p">([</span><span class="s2">&quot;1&quot;</span><span class="p">]),</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">])</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;standard&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">deepEqual</span><span class="p">(</span><span class="w">  </span><span class="nx">cleanCsv</span><span class="p">([[</span><span class="s2">&quot;1&quot;</span><span class="p">],[</span><span class="s2">&quot;2&quot;</span><span class="p">],[</span><span class="s2">&quot;3&quot;</span><span class="p">]]),</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">])</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="first-digit-js">
+<h2>first-digit.js<a class="headerlink" href="#first-digit-js" title="Permalink to this headline">#</a></h2>
+<p>C’est une fonction récursive.
+Elle utilise une fonction de ‘troncage’ de js.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Return the first signifiant digit of a number </span>
+<span class="cm"> * @param {number} number </span>
+<span class="cm"> * @param {number} pw </span>
+<span class="cm"> * @returns {number} </span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">firstDigit</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">pw</span><span class="o">=</span><span class="mf">1</span><span class="p">){</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">divided</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">pow</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="nx">pw</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="nx">divided</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">10</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">firstDigit</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">pw</span><span class="o">+</span><span class="mf">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="nx">divided</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nx">firstDigit</span><span class="p">(</span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">pw</span><span class="o">-</span><span class="mf">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">trunc</span><span class="p">(</span><span class="nx">divided</span><span class="p">)</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="id1">
+<h3>tests<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">test</span><span class="p">(</span><span class="s2">&quot;test 1&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">=&gt;{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="nx">first_digit</span><span class="p">(</span><span class="mf">1</span><span class="p">),</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Devrait retourner 1 à partir de 1&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;test 10&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">=&gt;{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="nx">first_digit</span><span class="p">(</span><span class="mf">10</span><span class="p">),</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Devrait retourner 1 à partir de 10&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;test 0.63&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">=&gt;{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="nx">first_digit</span><span class="p">(</span><span class="mf">0.63</span><span class="p">),</span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Devrait retourner 6 à partir de 0.63&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;test 0.000009&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">=&gt;{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="nx">first_digit</span><span class="p">(</span><span class="mf">0.000009</span><span class="p">),</span><span class="mf">9</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Devrait retourner 9 à partir de 0.000009&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;test 48.3&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">=&gt;{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="nx">first_digit</span><span class="p">(</span><span class="mf">48.3</span><span class="p">),</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Devrait retourner 4 à partir de 48.3&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;test 89999.9999&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">=&gt;{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="nx">first_digit</span><span class="p">(</span><span class="mf">89999.9999</span><span class="p">),</span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Devrait retourner 8 à partir de 89999.9999&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;test 0.0008999&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">=&gt;{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="nx">first_digit</span><span class="p">(</span><span class="mf">0.0008999</span><span class="p">),</span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Devrait retourner 8 à partir de 0.0008999&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;test 10000000&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="p">=&gt;{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">is</span><span class="p">(</span><span class="nx">first_digit</span><span class="p">(</span><span class="mf">10000000</span><span class="p">),</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Devrait retourner 1 à partir de 10000000&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="count-frenquensy-js">
+<h2>count-frenquensy.js<a class="headerlink" href="#count-frenquensy-js" title="Permalink to this headline">#</a></h2>
+<p>Retourne un object dont les clés sont les chiffres et les valeurs leurs fréquences</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * From a array of digit, return a object with digit in key and frenquensy in value</span>
+<span class="cm"> * @param {Array&lt;number&gt;} digitList </span>
+<span class="cm"> * @returns {Object}</span>
+<span class="cm"> */</span><span class="w"></span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">countFrequensy</span><span class="p">(</span><span class="nx">digitList</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">digitCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">]</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// count digit</span><span class="w"></span>
+<span class="w">    </span><span class="nx">digitList</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">9</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">&quot;invalid digit&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="nx">digitCount</span><span class="p">[</span><span class="nx">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">]</span><span class="o">++</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+
+<span class="w">    </span><span class="c1">// calc frequensy</span><span class="w"></span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">digitFrequensy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+
+<span class="w">    </span><span class="nx">digitCount</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">d</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"></span>
+<span class="w">        </span><span class="nx">digitFrequensy</span><span class="p">[(</span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">).</span><span class="nx">toString</span><span class="p">()]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="nx">d</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">digitList</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10</span><span class="w"></span>
+<span class="w">    </span><span class="p">})</span><span class="w"></span>
+
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">digitFrequensy</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="id2">
+<h3>tests<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nx">test</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;ava&#39;</span><span class="w"></span>
+
+<span class="k">import</span><span class="w"> </span><span class="nx">countFrequensy</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../count-frequensy.js&#39;</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;not digit error&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="kr">throws</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">countFrequensy</span><span class="p">([</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">99</span><span class="p">]),</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;invalid digit&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;must throw error if number is not 0&lt;x&lt;10&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;liste vide&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">deepEqual</span><span class="p">(</span><span class="nx">countFrequensy</span><span class="p">([]),</span><span class="w"> </span><span class="p">{},</span><span class="w"> </span><span class="s2">&quot;empty list must result in empty object&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;two one&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">deepEqual</span><span class="p">(</span><span class="nx">countFrequensy</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">]),</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span><span class="w"> </span><span class="mf">100</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;the result is not correct&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s2">&quot;one two three&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">t</span><span class="p">.</span><span class="nx">deepEqual</span><span class="p">(</span><span class="nx">countFrequensy</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">]),</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mf">1</span><span class="o">:</span><span class="w"> </span><span class="mf">33.3</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="o">:</span><span class="w"> </span><span class="mf">33.3</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="o">:</span><span class="w"> </span><span class="mf">33.3</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="s2">&quot;the result is not correct&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">})</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./prog/tp-benford"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By LP CDTL Cloud team<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
