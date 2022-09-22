@@ -8,7 +8,7 @@ Le fichier python comporte plusieurs fonctions :
 * une fonction de test qui test la fonction 'compte_chiffre'
 
 ```python
-# code de Ryan BOUARD
+# code de Ryan
 import csv
 import unittest
 from cgi import test
