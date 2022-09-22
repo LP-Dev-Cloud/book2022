@@ -1,3 +1,7 @@
+# Contexte :
+
+Nous devions créer un programme qui calcule le pourcentage du premier nombre différent de zero qui apparaissent pour chaque ligne d'un fichier, dans un ensemble de nombre "naturel". Il s'agit fichier csv qui contenait le nombre de naissances en Deux Sèvres.
+
 # Contenu de main.py :
 
 ```python
@@ -72,5 +76,12 @@ def pourcentage(liste, total):                                  # cette fonction
   return liste
 
 datas = read_data()
+```
+
+# Execution
+
+Ajoutez cette partie de code en dessous du reste.
+
+```python
 print(pourcentage(countNb(datas),len(datas)))
 ```
