@@ -11,7 +11,7 @@ Il y à deux fichié :
 ```JS
 const {readFileSync, promises: fsPromises} = require('fs');
 
-//fonction qui retourne le premier chiffre autre que zero de la chaine mise en parametre.
+//Fonction qui retourne le premier chiffre autre que zéro de la chaîne mise en paramètre.
 const PremierChiffre = (chaine) =>{
     chaine = parseInt(chaine);
     return     chaine.toString()[0];
@@ -19,16 +19,16 @@ const PremierChiffre = (chaine) =>{
 
 exports.PremierChiffre = PremierChiffre;
 
-//fonction qui retourne un tableau contenant tout les chiffre d'un fichier mis en parametre.
+//Fonction qui retourne un tableau contenant tous les chiffres d'un fichier mis en paramètre.
 function syncReadFile(filename) {
     const contents = readFileSync(filename, 'utf-8');
-  
+    //Ici, on sépare toutes les valeurs du fichier avec \r \n et ,
     const arr = contents.split(/\r?\n|,/);
     
     return arr;
   }
 
-//fonction qui retourne un tableau qui contient le nombre de fois qu'apait chaque chiffre dans le tableau mis en parametre.
+//Fonction qui retourne un tableau qui contient le nombre de fois qu'apparait chaque chiffre dans le tableau mis en paramètre.
 const compteur = (tab) =>{
     let stat = [0,0,0,0,0,0,0,0,0];
     tab.forEach(Element =>{
@@ -39,7 +39,7 @@ const compteur = (tab) =>{
 
 exports.compteur = compteur;
 
-//fonction qui retourne un tableau contenant les pourcentages des nombres de chaques cases par rapport au total de toutes les case additionée.
+//Fonction qui retourne un tableau contenant les pourcentages des nombres de chaque cases par rapport au total de toutes les cases additione.
 const calculeStat = (tab) => {
     let stat = [0,0,0,0,0,0,0,0,0];
     let tot = tab[0]+tab[1]+tab[2]+tab[3]+tab[4]+tab[5]+tab[6]+tab[7]+tab[8];
@@ -51,17 +51,20 @@ const calculeStat = (tab) => {
 
 exports.calculeStat = calculeStat;
 
+//On utilise la fonction syncReadFile pour lire et mettre dans le tableau data toutes les valeurs à l'intérieur.
 let data = syncReadFile('./data_inv.csv');
-console.log(data);
 
 let chiffres = [];
 
+//On utilise la fonction PremierChiffre() pour mettre dans le tableau chiffres tous les premiers chiffres des nombres du tableau data.
 data.forEach(Element =>{
     chiffres.push(PremierChiffre(Element));
 });
 
+//On utilise la fonction compteur pour mettre dans le tableau compte le nombre de fois qu'apparaît chaque chiffre du tableau chiffres.
 let compte = compteur(chiffres);
 
+//On calcule les statistiques du tableau compte avec calculeStat() et on les affiche.
 console.log(calculeStat(compte));
 ```
 
@@ -70,19 +73,19 @@ console.log(calculeStat(compte));
 ```js
 const Benford= require('./Benford');
 
-//test de la fonction PremierChiffre, on vérifie si les premier chiffre des chaines entrées en parametres sont valides.
+//test de la fonction PremierChiffre, on vérifie si les premiers chiffres des chaînes entrées en paramètres sont valides.
 test('PremierChiffreTests', () =>{
     expect(Benford.PremierChiffre("123")).toBe("1");
     expect(Benford.PremierChiffre("3")).toBe("3");
     expect(Benford.PremierChiffre("0425")).toBe("4");
 });
 
-//test la fonction compteur, vérifie si le nombre de chiffre compté et proportionelle au tableau entrée en parametre.
+//test la fonction compteur, vérifie si le nombre de chiffre compté et proportionnelle au tableau entrée en paramètre.
 test('compteurTests', () =>{
     expect(Benford.compteur(["3","1","2","1"])).toStrictEqual([2,1,1,0,0,0,0,0,0]);
 });
 
-//test la fonction calculeStat, vérifie si le tableau de pourcentage retourné est proportionelle au tableau mis en parametre.
+//test la fonction calculeStat, vérifie si le tableau de pourcentage retourné est proportionnel au tableau mis en paramètre.
 test('calculeStatTests', () =>{
     expect(Benford.calculeStat([2,1,1,0,0,0,0,0,0])).toStrictEqual([50,25,25,0,0,0,0,0,0]);
     expect(Benford.calculeStat([28,25,22,15,3,3,2,1,1])).toStrictEqual([28,25,22,15,3,3,2,1,1]);
